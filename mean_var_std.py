@@ -10,14 +10,14 @@ Original file is located at
 import numpy as np
 
 def calculate(list):
-    # Verifica que la lista tenga exactamente 9 elementos
+    # Verificar que la lista tenga exactamente 9 elementos
     if len(list) != 9:
         raise ValueError("List must contain nine numbers.")
 
-    # Convierte la lista en un array 3x3
+   
     arr = np.array(list).reshape(3, 3)
 
-    # Calcula todas las métricas
+    # Calcular
     calculations = {
         'mean': [arr.mean(axis=0).tolist(), arr.mean(axis=1).tolist(), arr.mean()],
         'variance': [arr.var(axis=0).tolist(), arr.var(axis=1).tolist(), arr.var()],
@@ -31,5 +31,5 @@ def calculate(list):
 
 from pprint import pprint
 
-# Prueba con el ejemplo del ejercicio
+# Prueba 
 pprint(calculate([0,1,2,3,4,5,6,7,8]))
